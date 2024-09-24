@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head> 
     <meta charset="utf-8" />
     <title>Page ChangerMotDePasse</title>
     <link rel="stylesheet" href="../style/css/changermotdepasse.css" />
@@ -13,21 +13,22 @@
     </header>
     <main>
         <h2>Changer de Mot de passse</h2>
-        <form>
+        <form method="post" action="compte.php">
             <label>Nouveau Mot de passe : </label>
             <input type="text" placeholder='test123'></input>
             <br></br>
             <label>Reconfirmer le Mot de passe : </label>
             <input type="text" placeholder='test123'></input>
+
+            <div className="buttons">
+                <button type="button" onclick="location.href='compte.php'">
+                    Annuler
+                </button>
+                <button type="submit">
+                    Confirmer
+                </button>
+            </div>
         </form>
-        <div className="buttons">
-            <button>
-                <link to="/">Annuler</link>
-            </button>
-            <button>
-                Confirmer
-            </button>
-        </div>
     </main>
 </body>
 

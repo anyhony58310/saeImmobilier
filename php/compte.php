@@ -26,17 +26,15 @@
             <label>Mot de passe : </label>
             <input type="text" placeholder='test123'></input>
             <br></br>
-            <label>Reconfirmer le Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
         </div>
         <div className="buttons">
-            <button>
-                <link to="/">Supprimer le Compte</link>
+            <button type="button" onclick="location.href='supprimerlecompte.php'">
+                Supprimer le Compte
             </button>
-            <button>
-                <link to="/">Changer de Mot de passe</link>
+            <button type="button" onclick="location.href='changermotdepasse.php'">
+                Changer de Mot de passe
             </button>
-            <button>
+            <button type="button" onclick="location.href='compteaccueil.php'">
                 Se Déconnecter
             </button>
         </div>

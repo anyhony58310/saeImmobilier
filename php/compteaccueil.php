@@ -14,11 +14,11 @@
     <main>
         <h2>Connectez-vous à votre Compte</h2>
         <div className="buttons">
-            <button>
-                <link to="/">Créer un compte</link>
+            <button type="button" onclick="location.href='creeruncompte.php'">
+                Créer un compte
             </button>
-            <button>
-                <link to="/">Se connecter</link>
+            <button type="button" onclick="location.href='seconnecter.php'">
+                Se connecter
             </button>
         </div>
     </main>
