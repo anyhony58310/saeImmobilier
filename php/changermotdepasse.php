@@ -12,7 +12,7 @@
         <Navbar />
     </header>
     <main>
-        <h2>Changer de Mot de passse</h2>
+        <h1>Changer de Mot de passse</h1>
         <form method="post" action="compte.php">
             <label>Nouveau Mot de passe : </label>
             <input type="text" placeholder='test123'></input>

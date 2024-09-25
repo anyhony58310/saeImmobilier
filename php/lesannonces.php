@@ -20,6 +20,8 @@
             </select>
             <input type="search" placeholder='Dans quel ville, un code postal ?'></input>
             <br></br>
+            <input type="button" placeholder="Votre budget max ?"></input>
+            <br></br>
 
             <input type="button" onClick=""></input>
             <label>Affichez plus de critères</label>
@@ -291,11 +293,15 @@
                 </div>
             </div>
         </form>
+
         <div className="buttons">
             <button>
                 Modifier ma recherche
             </button>
         </div>
+
+        <label>xxx xxx Annonces Trouvées</label>
+        
     </main>
 </body>
 

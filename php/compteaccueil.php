@@ -12,7 +12,7 @@
         <Navbar />
     </header>
     <main>
-        <h2>Connectez-vous à votre Compte</h2>
+        <h1>Connectez-vous à votre Compte</h1>
         <div className="buttons">
             <button type="button" onclick="location.href='creeruncompte.php'">
                 Créer un compte

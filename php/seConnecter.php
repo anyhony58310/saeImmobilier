@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Connexion</title>
+    <title>Page SeConnecter</title>
+    <link rel="stylesheet" href="../style/css/seconnecter.css" />
 </head>
 
 <body>
-    Se connecter
+    <header>
+        <Navbar />
+    </header>
+    <h1>Se connecter</h1>
     <form method="post" action="compte.php">
 
         <input type="text" placeholder="Email:" />

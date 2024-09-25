@@ -12,7 +12,7 @@
         <Navbar />
     </header>
     <main>
-        <h2>Supprimer le compte</h2>
+        <h1>Supprimer le compte</h1>
         <form method="post" action="compteaccueil.php">
             <label>Mot de passe : </label>
             <input type="text" placeholder='test123'></input>

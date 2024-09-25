@@ -12,7 +12,7 @@
         <Navbar />
     </header>
     <main>
-        <h2>Votre compte</h2>
+        <h1>Votre compte</h1>
         <div>
             <label>Nom : </label>
             <input type="text" placeholder='Mr.test'></input>
