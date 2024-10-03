@@ -1,3 +1,6 @@
+
+<?php sessi ?>
+
 <!DOCTYPE html>
 <html>
 

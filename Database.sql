@@ -1,8 +1,10 @@
-DROP DATABASE IF EXISTS databasetest;
+USE immobilier;
 
-CREATE DATABASE IF NOT EXISTS databasetest;
+DROP TABLE IF EXISTS Utilisateur ;
+DROP TABLE IF EXISTS Annonce ;
+DROP TABLE IF EXISTS Critere;
 
-DROP TABLE Tabletest IF EXISTS;
+DROP TABLE IF EXISTS Annonce_Critere;
 
 CREATE TABLE Utilisateur IF NOT EXISTS(
   id_utilisateur int PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -39,7 +41,7 @@ CREATE TABLE Critere IF NOT EXISTS(
   id_criteres int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   vente boolean,
   etat enum('ancien','neuf'),
-  habitation enum('maison','appartement','terrain','loft','chateau','batiment','immeuble','boutique','divers')
+  habitation enum('maison','appartement','terrain','loft','chateau','batiment','immeuble','boutique','divers'),
   ville varchar,
   Prix int,
   surface int,
@@ -49,12 +51,12 @@ CREATE TABLE Critere IF NOT EXISTS(
   meuble boolean,
   jardin boolean,
    
-  caracteristique enum('piscine','terrasse','balcon','parking','box','garage','cave','sous_sol')
+  caracteristique enum('piscine','terrasse','balcon','parking','box','garage','cave','sous_sol'),
 
   sans_vis_a_vis boolean,
   belle_vue boolean,
 
-  orientation enum('orientation_nord','orientation_sud','orientation_ouest','orientation_est')
+  orientation enum('orientation_nord','orientation_sud','orientation_ouest','orientation_est'),
   etage int,
 
   ascenseur boolean,
@@ -64,7 +66,7 @@ CREATE TABLE Critere IF NOT EXISTS(
 
   #limite maximum D et prend le reste C,B,A
   #faire un double slide petit et grand
-  Energetique enum('a','b','c','d','e','f','g')
+  Energetique enum('a','b','c','d','e','f','g'),
 
   date_creation_criteres datetime,
   date_derniere_mise_a_jour_criteres datetime,
