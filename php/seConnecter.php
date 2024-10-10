@@ -53,11 +53,13 @@ if(isset($_POST["envoi"])){
         $_SESSION["nom"] = $infosUtilisateur["nom"];
         $_SESSION["prenom"] = $infosUtilisateur["prenom"];
         $_SESSION["mail"] = $infosUtilisateur["prenom"];
+        $_SESSION["mdp"] =  $infosUtilisateur["mot_de_passe"];
         $_SESSION["connect"] = 1;
 
         $nom = $_SESSION["nom"];
         $prenom = $_SESSION["prenom"];
         $mail = $_SESSION["mail"];
+        $mdp = $_SESSION["mdp"];
         $connecte = $_SESSION["connect"]
         echo "Vous êtes connecté monsieur ou madame";
     }

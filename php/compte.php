@@ -1,5 +1,17 @@
 
-<?php sessi ?>
+<?php 
+session_start(); 
+
+$est_connect = false
+
+if(isset($_SESSION["connect"] )){
+    $nom = $_SESSION["nom"];
+    $prenom = $_SESSION["prenom"];
+    $mail = $_SESSION["mail"];
+    $mot_de_passe = $_SESSION["mdp"];
+    $est_connect = true;
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,16 +30,16 @@
         <h1>Votre compte</h1>
         <div>
             <label>Nom : </label>
-            <input type="text" placeholder='Mr.test'></input>
+            <input type="text" placeholder='Nom' name="nom" value = "<?php if($est_connect){echo $_SESSION["nom"];} else if(isset($_POST["nom"])){echo $_POST["nom"];} else{echo ' ' } ?>"  />
             <br></br>
             <label>Prénom : </label>
-            <input type="text" placeholder='test'></input>
+            <input type="text" placeholder='Prénom' name = "prenom" value = "<?php if($est_connect){echo $_SESSION["prenom"];} else if(isset($_POST["prenom"])){echo $_POST["prenom"]} else{echo ' ' } ?>" />
             <br></br>
             <label>Email : </label>
-            <input type="text" placeholder='test.test@gmail.com'></input>
+            <input type="email" placeholder='test.test@gmail.com' name = "mail" />
             <br></br>
             <label>Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
+            <input type="password" placeholder='test1235' name = "mdp" />
             <br></br>
         </div>
         <div className="buttons">
