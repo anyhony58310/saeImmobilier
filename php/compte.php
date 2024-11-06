@@ -1,7 +1,7 @@
 
 <?php 
 session_start(); 
-
+require('header.php');
 $est_connect = false
 
 if(isset($_SESSION["connect"] )){

@@ -1,4 +1,7 @@
 <?php
+session_start();
+require("header.php");
+require("fonctions.php");
 if(isset($_SESSION["nom"])){
     $connect = true;
 }
@@ -23,13 +26,15 @@ else{
     </header>
     <main>
         <h1>Changer de Mot de passse</h1>
-        <?php  
-            if $rkjgeoimjgoijep = oizieuuuuuu,;
+        <?php 
+            //Cas ou l'utilisateur n'est pas connecté et n'a pas envoyé le formulaire 
             if ($connect==false ){
                 echo "Il faut se connecter avant de changer le mot de passe";
             }
 
+            //Cas ou l'utilisateur a envoyé le formulaire
             if(isset($_POST["envo"])){
+                //Cas ou l'utilisateur n'est pas connecté
                 if($connect==false){
                     echo 
                     "<p class = 'errors' > 
@@ -38,15 +43,21 @@ else{
                     header("Location: seConnecter.php");
 
                 }
+
+                // cas ou l'utilisateur est connecté
+                else{
+                    if()
+                    $mysqli = openMaBase();
+                }
             }
         ?>
 
         <form method="post" action="compte.php">
             <label>Nouveau Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
+            <input type="text" name = "mot_de_passe" value = "<?php if(isset($_POST['mot_de_passe'])){echo $_POST['mot_de_passe'];} ?>" placeholder='test123'></input>
             <br></br>
             <label>Reconfirmer le Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
+            <input type="text" name = "conf" placeholder='test123' value = "<?php if(isset($_POST['conf'])){echo $_POST['conf'];} ?>" ></input>
 
             <div className="buttons">
                 <button type="button" onclick="location.href='compte.php'">

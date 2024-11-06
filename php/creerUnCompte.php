@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require("header.php");
 include("fonctions.php");
 
 date_default_timezone_set("Europe/Paris"); 
@@ -93,14 +94,15 @@ if (isset($_POST["envoi"])) {
 
             closeMaBase($mysqli);
 
-            echo "<p>Inscription réussie !</p>";
-           
+            $_SESSION['message']['inscriptionOk'] = true;
+            sleep(5);
+            header("Location: seConnecter.php");            
 
         }
         
         
         ?>
-        <form method="post" action="compteCreerUnCompte.php">
+        <form method="post" action="creerUnCompte.php">
 
             <input type="text" placeholder="Nom" name="nom" required value = "<?php if(isset($_POST['nom'])){echo $_POST['nom'];} ?>" />
             <input type="text" placeholder="Prénom" name="prenom" required value = "<?php if(isset($_POST['prenom'])){echo $_POST['prenom'];} ?>"  />

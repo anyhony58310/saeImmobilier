@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+require("header.php");
 include("fonctions.php");
 $valid = false;
 $errors = []; 
@@ -40,7 +41,12 @@ if(isset($_POST["envoi"])){
     </header>
     <h1>Se connecter</h1>
 
-    <?php 
+    <?php
+    if((isset($_SESSION["message"])) && (isset($_SESSION["message"]["inscriptionOk"])) && ($_SESSION["message"]["inscriptionOk"]==true)){
+        echo "Merci pour votre inscription, vous pouvez à présent vous connecter !";
+        unset($_SESSION["message"]["inscriptionOk"]); 
+    }
+    
     if(!$valid)
     {
         echo '<div class="errors">';
@@ -60,7 +66,7 @@ if(isset($_POST["envoi"])){
         $prenom = $_SESSION["prenom"];
         $mail = $_SESSION["mail"];
         $mdp = $_SESSION["mdp"];
-        $connecte = $_SESSION["connect"]
+        $connecte = $_SESSION["connect"];
         echo "Vous êtes connecté monsieur ou madame";
     }
 
