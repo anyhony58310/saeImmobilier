@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS databasetest;
+CREATE DATABASE IF NOT EXISTS databasetest;
+
 USE immobilier;
 
 DROP TABLE IF EXISTS Utilisateur ;
@@ -12,6 +15,7 @@ CREATE TABLE Utilisateur IF NOT EXISTS(
   prenom varchar,
   email varchar,
   mot_de_passe varchar,
+  telephone int,
   date_creation_compte datetime,
   date_derniere_connexion datetime
 );
@@ -43,14 +47,14 @@ CREATE TABLE Critere IF NOT EXISTS(
   etat enum('ancien','neuf'),
   habitation enum('maison','appartement','terrain','loft','chateau','batiment','immeuble','boutique','divers'),
   ville varchar,
-  Prix int,
+  prix int,
   surface int,
   surface_terrain int,
   piece int, #stocker le nombre de piece avec un nombre puis de mettre un critère de limite
   chambre int,
   meuble boolean,
   jardin boolean,
-   
+  
   caracteristique enum('piscine','terrasse','balcon','parking','box','garage','cave','sous_sol'),
 
   sans_vis_a_vis boolean,
@@ -75,7 +79,7 @@ CREATE TABLE Critere IF NOT EXISTS(
 );
 
 CREATE TABLE Annonce_Critere IF NOT EXISTS(
-  id_annonce_criteres int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_annonce_critere int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   id_annonce int,
   id_criteres int,
   FOREIGN KEY (id_annonce) REFERENCES Annonce(id_annonce),
