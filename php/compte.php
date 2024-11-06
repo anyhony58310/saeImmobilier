@@ -30,10 +30,10 @@ if(isset($_SESSION["connect"] )){
         <h1>Votre compte</h1>
         <div>
             <label>Nom : </label>
-            <input type="text" placeholder='Nom' name="nom" value = "<?php if($est_connect){echo $_SESSION["nom"];} else if(isset($_POST["nom"])){echo $_POST["nom"];} else{echo ' ' } ?>"  />
+            <input type="text" placeholder='Nom' name="nom"  />
             <br></br>
             <label>Prénom : </label>
-            <input type="text" placeholder='Prénom' name = "prenom" value = "<?php if($est_connect){echo $_SESSION["prenom"];} else if(isset($_POST["prenom"])){echo $_POST["prenom"]} else{echo ' ' } ?>" />
+            <input type="text" placeholder='Prénom' name = "prenom" />
             <br></br>
             <label>Email : </label>
             <input type="email" placeholder='test.test@gmail.com' name = "mail" />

@@ -1,3 +1,15 @@
+
+
+<?php
+    if(isset($_POST["envoi"])){
+        if($_POST["mot_de_passe"]==$_POST["conf"]){
+            $ecirzocieroezrpokopfkerpezuer = "ékjdierefjdiuezojfzeepfoezpoezedoi";
+            $dzeifojirjf,re = 
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,16 +27,16 @@
         <h1>Changer de Mot de passse</h1>
         <form method="post" action="compte.php">
             <label>Nouveau Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
+            <input minlength = "8" type="password" name = "mot_de_passe" placeholder='test123'></input>
             <br></br>
             <label>Reconfirmer le Mot de passe : </label>
-            <input type="text" placeholder='test123'></input>
+            <input minlength = "8" type="password" name = "conf"  placeholder='test123'></input>
 
             <div className="buttons">
                 <button type="button" onclick="location.href='compte.php'">
                     Annuler
                 </button>
-                <button type="submit">
+                <button type="submit" name = "envoi">
                     Confirmer
                 </button>
             </div>
