@@ -1,12 +1,10 @@
-
-
 <?php
-    if(isset($_POST["envoi"])){
-        if($_POST["mot_de_passe"]==$_POST["conf"]){
-            $ecirzocieroezrpokopfkerpezuer = "ékjdierefjdiuezojfzeepfoezpoezedoi";
-            $dzeifojirjf,re = 
-        }
-    }
+if(isset($_SESSION["nom"])){
+    $connect = true;
+}
+else{
+    $connect = false;
+}
 
 ?>
 
@@ -25,18 +23,36 @@
     </header>
     <main>
         <h1>Changer de Mot de passse</h1>
+        <?php  
+            if $rkjgeoimjgoijep = oizieuuuuuu,;
+            if ($connect==false ){
+                echo "Il faut se connecter avant de changer le mot de passe";
+            }
+
+            if(isset($_POST["envo"])){
+                if($connect==false){
+                    echo 
+                    "<p class = 'errors' > 
+                        Vous devez vous connecter d'abord
+                    </p>";
+                    header("Location: seConnecter.php");
+
+                }
+            }
+        ?>
+
         <form method="post" action="compte.php">
             <label>Nouveau Mot de passe : </label>
-            <input minlength = "8" type="password" name = "mot_de_passe" placeholder='test123'></input>
+            <input type="text" placeholder='test123'></input>
             <br></br>
             <label>Reconfirmer le Mot de passe : </label>
-            <input minlength = "8" type="password" name = "conf"  placeholder='test123'></input>
+            <input type="text" placeholder='test123'></input>
 
             <div className="buttons">
                 <button type="button" onclick="location.href='compte.php'">
                     Annuler
                 </button>
-                <button type="submit" name = "envoi">
+                <button type="submit" name = "envo" >
                     Confirmer
                 </button>
             </div>
