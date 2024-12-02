@@ -12,23 +12,22 @@
         <Navbar />
     </header>
     <main>
-        <h1>Supprimer le compte</h1>
-        <form method="post" action="compteaccueil.php">
+        <h2>Supprimer le compte</h2>
+        <form>
             <label>Mot de passe : </label>
             <input type="text" placeholder='test123'></input>
             <br></br>
             <label>Reconfirmer le Mot de passe : </label>
             <input type="text" placeholder='test123'></input>
-
-            <div className="buttons">
-                <button type="button" onclick="location.href='compte.php'">
-                    Annuler
-                </button>
-                <button type="submit">
-                    Confirmer
-                </button>
-            </div>
         </form>
+        <div className="buttons">
+            <button>
+                <link to="/">Annuler</link>
+            </button>
+            <button>
+                Confirmer
+            </button>
+        </div>
     </main>
 </body>
 

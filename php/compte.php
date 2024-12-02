@@ -1,18 +1,3 @@
-
-<?php 
-session_start(); 
-require('header.php');
-$est_connect = false
-
-if(isset($_SESSION["connect"] )){
-    $nom = $_SESSION["nom"];
-    $prenom = $_SESSION["prenom"];
-    $mail = $_SESSION["mail"];
-    $mot_de_passe = $_SESSION["mdp"];
-    $est_connect = true;
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -27,29 +12,31 @@ if(isset($_SESSION["connect"] )){
         <Navbar />
     </header>
     <main>
-        <h1>Votre compte</h1>
+        <h2>Votre compte</h2>
         <div>
             <label>Nom : </label>
-            <input type="text" placeholder='Nom' name="nom"  />
+            <input type="text" placeholder='Mr.test'></input>
             <br></br>
             <label>Prénom : </label>
-            <input type="text" placeholder='Prénom' name = "prenom" />
+            <input type="text" placeholder='test'></input>
             <br></br>
             <label>Email : </label>
-            <input type="email" placeholder='test.test@gmail.com' name = "mail" />
+            <input type="text" placeholder='test.test@gmail.com'></input>
             <br></br>
             <label>Mot de passe : </label>
-            <input type="password" placeholder='test1235' name = "mdp" />
+            <input type="text" placeholder='test123'></input>
             <br></br>
+            <label>Reconfirmer le Mot de passe : </label>
+            <input type="text" placeholder='test123'></input>
         </div>
         <div className="buttons">
-            <button type="button" onclick="location.href='supprimerlecompte.php'">
-                Supprimer le Compte
+            <button>
+                <link to="/">Supprimer le Compte</link>
             </button>
-            <button type="button" onclick="location.href='changermotdepasse.php'">
-                Changer de Mot de passe
+            <button>
+                <link to="/">Changer de Mot de passe</link>
             </button>
-            <button type="button" onclick="location.href='compteaccueil.php'">
+            <button>
                 Se Déconnecter
             </button>
         </div>
