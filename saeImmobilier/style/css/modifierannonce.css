@@ -1,0 +1,131 @@
+html , body {
+    height: 100%;
+
+
+}
+
+.image{
+    height: 200px;
+    width: 80%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    background-color: grey;
+
+}
+
+button{
+    background-color: #04BBFF;
+    border-radius: 25px; 
+    padding: 8px;
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border-width:0;
+    border-left-width: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+
+.champs{
+    background-color: #0594D0;
+}
+
+input{
+    border-radius: 25px;
+    padding: 5px;
+    border-width: 0;
+    border-left-width: 0;    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#form {
+    flex-grow: 1;
+    width: 95%;
+}
+
+#form form {
+    height: 100%;
+}
+
+
+#form form .champs{
+    height: auto;
+
+}
+#map {
+    margin-left: 10px;
+    flex-grow: 2;
+    height: 100%;
+    width: 100%;
+}
+
+#map #viewDiv {
+    width: 100%;
+    height: 100%;
+
+}
+
+textarea{
+    border-radius: 25px;
+    width: 75%;
+    height: 100px;
+}
+
+
+.bande-indicative{
+    height: 40px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: white;
+    border: solid 1px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between; /* Espacement maximal entre les boutons */
+    align-items: center; /* Aligne verticalement les éléments (optionnel) */
+    width: 100%; /* Facultatif : ajuste la largeur du conteneur */
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+
+}
+
+input[type="text"]{
+    height: 30px;
+    width: 75%;
+}
+
+input[type="number"]{
+    height: 30px;
+    width: 15%;
+    margin-bottom: 15px;
+
+}
+
+.label-prix{
+    margin-bottom: 1px;
+    width: 100%;
+}
+
+input,p{
+    margin-left: 5px;
+}
+
+

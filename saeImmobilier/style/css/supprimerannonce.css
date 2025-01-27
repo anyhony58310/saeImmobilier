@@ -1,0 +1,64 @@
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    display: flex; /* Transforme le body en conteneur flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    min-height: 100vh; /* Utiliser min-height pour remplir l'écran */
+}
+h1{
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+p{
+    margin-bottom: 20%;
+    font-weight: bold;
+}
+
+form{
+    width: 80%;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+main {
+    text-align: center;
+    background-color: #0594D0;
+    width: 40%;
+    /* height: auto; -- Pas nécessaire */
+    display: flex;          /* Ajout de flex pour aligner les boutons */
+    flex-direction: column;  /* Les éléments sont en colonne */
+    align-items: center;     /* Centre horizontalement les enfants */
+    padding: 20px;          /* Ajout d'un peu d'espace autour */
+}
+
+button {
+    background-color: #04BBFF;
+    border: none;  /* Utiliser border: none au lieu de border-width: 0 */
+    border-radius: 25px;
+    height: 40px;
+    width: 120px;
+    margin-bottom: 15px;  /* Ajuster la marge si nécessaire */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="button"]{
+    background-color: #007198;
+}
+
+button[type="submit"]{
+    background-color: #04BBFF;
+}
+
+button:hover {
+    background-color: orange;
+}

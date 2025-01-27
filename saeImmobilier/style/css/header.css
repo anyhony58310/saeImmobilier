@@ -1,0 +1,99 @@
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #0594D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.icons{
+    width: auto;
+    height: 30px;
+    margin-right: 15px;
+    
+}
+
+.image{
+    margin-left: 50px;
+    height: 100px;
+}
+
+button{
+    height: 40%;
+    border-radius: 25px;
+    margin-left: 5%;
+    background-color: #04BBFF;
+    align-items: center;
+    border-width : 0;
+    border-left-width : 0;
+    
+}
+.icone-with-name{
+    display: flex;      /* Pour aligner l'icône et le nom verticalement */
+    flex-direction: column; /* On veut l'icône au dessus du nom */
+    align-items: center; /* Pour centrer l'icône et le nom horizontalement */
+    text-align: center;  /* Pour que le texte du nom soit centré horizontalement */
+    margin-right: 30px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px 15px;  /* Assurez-vous que le padding ne fasse pas déborder */
+    box-sizing: border-box; /* Inclut le padding dans la taille de l'élément */
+}
+
+
+
+/* Effets au survol */
+.icone-with-name:hover {
+    background-color: orange; /* Changement de couleur de fond */
+    transform: scale(1.05);    /* Légère augmentation de la taille */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre légère */
+}
+
+.icone-with-name .icons {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Animation des icones */
+.icone-with-name:hover .icons {
+   transform: rotate(360deg); /* Rotation de l'icône au survol */
+
+}
+/* Effet de soulignement */
+.icone-with-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9100; /* Couleur du soulignement */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+
+}
+.icone-with-name:hover::after {
+  transform: scaleX(1);
+}
+
+/* Style du bouton au survol */
+button:hover {
+    background-color: rgba(0, 153, 255, 0.8); /* légèrement plus clair */
+}
+/* Style du bouton au clic */
+button.clicked {
+   background-color: rgba(0, 153, 255, 0.5); /* encore plus clair */
+   transform: scale(0.95);   /* Légère réduction de la taille */
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+

@@ -1,0 +1,104 @@
+/* Style général */
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    display: flex; /* Transforme le body en conteneur flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    min-height: 100vh; /* Utiliser min-height pour remplir l'écran */
+    flex-direction: column;
+
+}
+
+header{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid 1px;
+    width: 98%;
+}
+
+main{
+    width: 60%;
+    background-color: #0594D0;
+    padding: 30px;
+}
+
+button{
+    background-color: #04BBFF;
+    border-radius: 25px;
+    padding: 8px;
+    font-size: 15px;
+    width: 130px;
+    height: 35px;
+    border-width: 0;
+    border-left-width: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+
+form{
+    width:auto;
+}
+
+input[type="text"], [type="number"] {
+    border-radius: 25px;
+    height: 30px;
+    border: 0;
+}
+textarea{
+    width: 80%;
+    height: 80px;
+    border-radius: 25px;
+    padding: 15px;
+
+}
+input[type="text"]{
+    width: 80%;
+}
+
+input[type="number"]{
+    width: 40%;
+}
+
+.type-bien, .vente, .etat, 
+.meuble, .exterieur, .exposition,  .orientation,
+.accessibilite{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Toujours 2 colonnes */
+    gap: 20px;
+    justify-content: center;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;  
+}
+
+
+
+
+.option{
+    background-color: white;
+    padding: 10px;
+}
+
+/* Afficher les radio en grille
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* Toujours 2 colonnes */
+/*gap: 20px;*/ /* Espacement entre les cartes */
+
+
+
+
+

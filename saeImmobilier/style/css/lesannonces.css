@@ -1,0 +1,313 @@
+
+
+
+/*Code CSS*/
+
+html , body {
+    height: 100%;
+
+
+}
+
+
+
+button{
+    background-color: #04BBFF;
+    border-radius: 25px; 
+    padding: 8px;
+    font-size: 15px;
+    height: 35px;
+    border-width:0;
+    border-left-width: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]{
+    width: auto;
+}
+
+button[type="button"]{
+    width: auto;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+
+
+input{
+    border-radius: 25px;
+    padding: 5px;
+    border-width: 0;
+    border-left-width: 0;    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+td{
+    border: solid 1px;
+}
+
+#form {
+    flex-grow: 1;
+    width: 95%;
+}
+
+#form form {
+    height: 100%;
+}
+
+
+#form form .champs{
+    height: auto;
+
+}
+#map {
+    margin-left: 10px;
+    flex-grow: 2;
+    height: 100%;
+    width: 100%;
+}
+
+#map #viewDiv {
+    width: 100%;
+    height: 100%;
+
+}
+
+textarea{
+    border-radius: 25px;
+    width: 75%;
+    height: 100px;
+}
+
+
+
+input[type="text"]{
+    height: 30px;
+    width: 75%;
+}
+
+input[type="number"]{
+    height: 30px;
+    width: 15%;
+    margin-bottom: 15px;
+
+}
+
+
+input,p{
+    margin-left: 5px;
+} 
+
+.label-prix{
+    margin-bottom: 1px;
+    width: 100%;
+}
+
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 20px; /* Ajuste la largeur de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    vertical-align: middle; /* Aligne verticalement avec le texte */
+    margin-right: 5px; /* Ajoute un petit espace entre l'image et le texte */
+}
+.ajouter{
+    width: 200px;
+    background-color:#0594D0;
+}
+
+.bande-indicative{
+    height: 40px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: white;
+    border: solid 1px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between; /* Espacement maximal entre les boutons */
+    align-items: center; /* Aligne verticalement les éléments (optionnel) */
+    width: 100%; /* Facultatif : ajuste la largeur du conteneur */
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+}
+
+.image{
+    height: 200px;
+    width: 80%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 40px;
+
+}
+
+.bleu{
+    background-color: #0594D0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Toujours 2 colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centre la grille si elle est petite */
+}
+
+.card {
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Déplace la carte légèrement vers le haut */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Augmente l'ombre */
+}
+
+
+/* Image de la carte */
+.card .image {
+    flex-grow: 1; /* Fait occuper à la div .image tout l'espace disponible */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease; /* Animation pour le changement de couleur */    
+
+}
+
+.card:hover .image {
+    background-color: #d0d0d0; /* Change légèrement la couleur de fond au survol */
+}
+
+
+/* Informations de la carte */
+.card .info {
+    background-color: #D9D9D9;
+    padding: 10px;
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .info {
+    background-color: #c9c9c9; /* Change légèrement la couleur de fond de la section info */
+}
+
+.card .info p {
+    margin: 0;
+}
+
+/* Prix et favoris */
+.price-favorite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-favorite p {
+    font-weight: bold;
+}
+
+.favorite {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.favorite img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Table styling */
+.search-table {
+    border-collapse: collapse;
+    background-color: #d9d9d9;
+    border: 1px solid #ccc;
+    width: auto;
+    table-layout: fixed;
+    width: 100%; /* La table prend toute la largeur */
+}
+
+/* Table styling */
+.search-table {
+    border-collapse: collapse;
+    background-color: #d9d9d9;
+    border: 0;
+    width: auto;
+    table-layout: fixed;
+    width: 100%; /* La table prend toute la largeur */
+}
+
+
+/* Dropdown button */
+.dropdown-button {
+    background-color: #d9d9d9;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Bouton occupe toute la largeur de la cellule */
+    height: 100%; /* Bouton occupe toute la hauteur de la cellule */
+    box-sizing: border-box; /* Inclure les bordures dans les dimensions */
+}
+
+.dropdown-button span {
+    margin-left: 5px;
+}
+
+.dropdown-cell{
+    width: 150px;
+}
+
+/* Inputs */
+.input-cell input {
+    width: 97%; /* Input occupe toute la largeur de la cellule */
+    height: 100%; /* Input occupe toute la hauteur de la cellule */
+    background-color: #d9d9d9;
+    border: none; /* Supprimer les bordures internes */
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box; /* Inclure le padding dans les dimensions */
+}
+
+.case-blanche{
+    background-color: white;
+    border: 0;
+}
+
+
+
